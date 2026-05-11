@@ -1,0 +1,71 @@
+{
+  "manifest_version": 3,
+  "name": "AI对话导出助手",
+  "version": "1.0.0",
+  "description": "将 AI 对话平台的历史对话记录导出为 Markdown 或 HTML 文件，支持多平台扩展",
+  "author": "SessionTalk Exporter",
+
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  },
+
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "assets/icons/icon16.png",
+      "48": "assets/icons/icon48.png"
+    },
+    "default_title": "AI对话导出助手"
+  },
+
+  "permissions": [
+    "storage",
+    "downloads",
+    "activeTab",
+    "scripting"
+  ],
+
+  "host_permissions": [
+    "https://chatglm.cn/*",
+    "https://kimi.moonshot.cn/*",
+    "https://www.doubao.com/*"
+  ],
+
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatglm.cn/*",
+        "https://*.chatglm.cn/*",
+        "https://kimi.moonshot.cn/*",
+        "https://*.moonshot.cn/*",
+        "https://www.doubao.com/*"
+      ],
+      "js": [
+        "content/index.js"
+      ],
+      "css": ["content/styles/content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "options_page": "options/options.html",
+
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/*"],
+      "matches": [
+        "https://chatglm.cn/*",
+        "https://*.chatglm.cn/*",
+        "https://kimi.moonshot.cn/*",
+        "https://www.doubao.com/*"
+      ]
+    }
+  ]
+}

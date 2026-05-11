@@ -1,0 +1,122 @@
+/* 智谱清言导出助手 - Content Script 样式 */
+
+/* 导出按钮悬浮面板（备用 UI） */
+.zhipu-export-panel {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  padding: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.zhipu-export-btn {
+  padding: 10px 20px;
+  background: #1890ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.zhipu-export-btn:hover {
+  background: #40a9ff;
+}
+
+.zhipu-export-btn:disabled {
+  background: #d9d9d9;
+  color: #999;
+  cursor: not-allowed;
+}
+
+/* 导出选项面板 */
+.zhipu-options-panel {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e8e8e8;
+}
+
+.zhipu-option-group {
+  margin-bottom: 12px;
+}
+
+.zhipu-option-label {
+  display: block;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.zhipu-select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.zhipu-checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 进度提示 */
+.zhipu-progress {
+  margin-top: 12px;
+  padding: 12px;
+  background: #f5f5f5;
+  border-radius: 4px;
+}
+
+.zhipu-progress-bar {
+  width: 100%;
+  height: 4px;
+  background: #e8e8e8;
+  border-radius: 2px;
+  margin-bottom: 8px;
+}
+
+.zhipu-progress-fill {
+  height: 100%;
+  background: #1890ff;
+  border-radius: 2px;
+  transition: width 0.3s;
+}
+
+.zhipu-progress-text {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Toast 提示 */
+.zhipu-toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+  padding: 12px 24px;
+  background: #333;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  opacity: 0.9;
+  transition: opacity 0.3s;
+}
+
+.zhipu-toast-success {
+  background: #52c41a;
+}
+
+.zhipu-toast-error {
+  background: #ff4d4f;
+}
+
+.zhipu-toast-warning {
+  background: #faad14;
+}

@@ -1,0 +1,21 @@
+node_modules/
+.claude/
+
+# 个人对话记录 - 不要提交
+page_cloudcode.html
+page_full.html
+parsed_cloudcode.json
+parsed_conversations.json
+对话导出/
+对话导出_cloudcode/
+对话导出_latest/
+对话导出_full.md
+智谱清言对话导出.md
+export_full.js
+extract_conversations.js
+
+# 系统文件
+.DS_Store
+Thumbs.db
+*.swp
+*.swo

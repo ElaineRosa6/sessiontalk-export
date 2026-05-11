@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>导出设置</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="options-container">
+    <header class="options-header">
+      <h1>导出设置</h1>
+    </header>
+
+    <section class="options-section">
+      <h2>默认导出格式</h2>
+      <div class="format-options">
+        <label class="radio-label">
+          <input type="radio" name="defaultFormat" value="markdown" checked />
+          Markdown (.md)
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="defaultFormat" value="text" />
+          纯文本
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="defaultFormat" value="json" />
+          JSON (.json)
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="defaultFormat" value="html" />
+          HTML (.html)
+        </label>
+      </div>
+    </section>
+
+    <section class="options-section">
+      <h2>导出选项</h2>
+      <div class="option-item">
+        <label class="checkbox-label">
+          <input type="checkbox" id="includeTimestamp" checked />
+          包含时间戳信息
+        </label>
+      </div>
+      <div class="option-item">
+        <label class="checkbox-label">
+          <input type="checkbox" id="includeMetadata" checked />
+          包含元数据（模型信息、对话ID等）
+        </label>
+      </div>
+      <div class="option-item">
+        <label class="checkbox-label">
+          <input type="checkbox" id="autoMerge" />
+          默认合并导出
+        </label>
+      </div>
+    </section>
+
+    <section class="options-section">
+      <h2>文件命名</h2>
+      <div class="option-item">
+        <label>命名模板:</label>
+        <input type="text" id="filenameTemplate" value="{title}_{date}" placeholder="{title}_{date}" />
+        <p class="help-text">可用变量: {title}, {date}, {id}</p>
+      </div>
+    </section>
+
+    <section class="options-section">
+      <h2>高级设置</h2>
+      <div class="option-item">
+        <label class="checkbox-label">
+          <input type="checkbox" id="debugMode" />
+          启用调试模式（显示详细日志）
+        </label>
+      </div>
+    </section>
+
+    <footer class="options-footer">
+      <button class="save-btn" id="saveBtn">保存设置</button>
+      <button class="reset-btn" id="resetBtn">重置默认</button>
+    </footer>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
