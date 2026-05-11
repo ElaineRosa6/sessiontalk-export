@@ -122,18 +122,24 @@ async function exportCurrentConversation(format = 'markdown') {
 
 /**
  * 导航到指定对话（通过点击侧边栏项）
- * @param {number} index - 对话在列表中的索引
+ * @param {string} title - 对话标题
  * @returns {Promise<boolean>}
  */
-async function navigateToConversation(index) {
+async function navigateToConversation(title) {
   const items = document.querySelectorAll('.item.conversation-item, [class*="history-item"], [class*="conversation-item"]');
-  if (index < 0 || index >= items.length) return false;
 
-  // 点击侧边栏或主区域的对话项
-  items[index].click();
-  // 等待页面加载新对话内容
-  await sleep(1500);
-  return true;
+  // 根据标题查找匹配的对话项
+  for (const item of items) {
+    const titleEl = item.querySelector('[class*="title"]');
+    const itemTitle = titleEl?.textContent?.trim();
+    if (itemTitle && itemTitle === title) {
+      item.click();
+      await sleep(1500);
+      return true;
+    }
+  }
+
+  return false;
 }
 
 /**
@@ -165,7 +171,7 @@ async function exportConversations(conversations, format = 'markdown', merge = f
         if (!conv.messages || conv.messages.length === 0) {
           // 这是从侧边栏获取的元数据，需要先点击该对话
           // 尝试通过侧边栏导航
-          const navOk = await navigateToConversation(i);
+          const navOk = await navigateToConversation(conv.title);
           if (!navOk) continue;
 
           // 重新提取
@@ -200,7 +206,7 @@ async function exportConversations(conversations, format = 'markdown', merge = f
         let fullConv = conv;
 
         if (!conv.messages || conv.messages.length === 0) {
-          const navOk = await navigateToConversation(i);
+          const navOk = await navigateToConversation(conv.title);
           if (!navOk) continue;
 
           fullConv = await extractConversation(platform);
