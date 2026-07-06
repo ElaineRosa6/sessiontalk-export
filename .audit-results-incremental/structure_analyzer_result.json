@@ -1,0 +1,170 @@
+{
+  "project_root": "D:/Project/Go_project/sessiontalk_export",
+  "languages": {
+    "JavaScript": 23,
+    "JSON": 5,
+    "HTML": 6,
+    "CSS": 3
+  },
+  "frameworks": [],
+  "total_files": 57,
+  "file_type_distribution": {
+    "no_ext": 1,
+    ".js": 23,
+    ".json": 5,
+    ".html": 6,
+    ".md": 16,
+    ".png": 3,
+    ".css": 3
+  },
+  "config_files": [
+    ".\\package.json",
+    ".\\webpack.config.js"
+  ],
+  "structural_issues": [
+    {
+      "severity": "P2",
+      "category": "deployment",
+      "issue": "No Dockerfile found for deployable project",
+      "impact": "Inconsistent deployment environments, harder CI/CD",
+      "suggestion": "Add a Dockerfile with multi-stage build for production"
+    },
+    {
+      "severity": "P2",
+      "category": "deployment",
+      "issue": "No CI/CD configuration found",
+      "impact": "No automated testing or deployment pipeline",
+      "suggestion": "Add CI/CD configuration (GitHub Actions, GitLab CI, etc.)"
+    },
+    {
+      "severity": "P2",
+      "category": "testing",
+      "issue": "Source directory 'src\\background' has no sibling or nested test directory",
+      "impact": "Code in this directory is likely untested",
+      "suggestion": "Add tests/ or __tests__/ alongside 'src\\background'"
+    },
+    {
+      "severity": "P2",
+      "category": "testing",
+      "issue": "Source directory 'src\\content' has no sibling or nested test directory",
+      "impact": "Code in this directory is likely untested",
+      "suggestion": "Add tests/ or __tests__/ alongside 'src\\content'"
+    },
+    {
+      "severity": "P2",
+      "category": "testing",
+      "issue": "Source directory 'src\\core' has no sibling or nested test directory",
+      "impact": "Code in this directory is likely untested",
+      "suggestion": "Add tests/ or __tests__/ alongside 'src\\core'"
+    },
+    {
+      "severity": "P2",
+      "category": "testing",
+      "issue": "Source directory 'src\\lib' has no sibling or nested test directory",
+      "impact": "Code in this directory is likely untested",
+      "suggestion": "Add tests/ or __tests__/ alongside 'src\\lib'"
+    },
+    {
+      "severity": "P2",
+      "category": "testing",
+      "issue": "Source directory 'src\\options' has no sibling or nested test directory",
+      "impact": "Code in this directory is likely untested",
+      "suggestion": "Add tests/ or __tests__/ alongside 'src\\options'"
+    },
+    {
+      "severity": "P2",
+      "category": "testing",
+      "issue": "Source directory 'src\\platforms' has no sibling or nested test directory",
+      "impact": "Code in this directory is likely untested",
+      "suggestion": "Add tests/ or __tests__/ alongside 'src\\platforms'"
+    },
+    {
+      "severity": "P2",
+      "category": "testing",
+      "issue": "Source directory 'src\\popup' has no sibling or nested test directory",
+      "impact": "Code in this directory is likely untested",
+      "suggestion": "Add tests/ or __tests__/ alongside 'src\\popup'"
+    },
+    {
+      "file": "test\\test_full_pipeline.js",
+      "line": 16,
+      "severity": "P2",
+      "category": "cross_feature_import",
+      "description": "Cross-feature import '../src/core/htmlToMd.js' — file in feature 'test' reaches into another feature's internals",
+      "suggestion": "Expose a public API from the other feature and import through it, or move the shared code to a common module",
+      "is_heuristic": true,
+      "source": "stdlib-heuristic",
+      "feature": "test",
+      "target": "../src/core/htmlToMd.js"
+    },
+    {
+      "file": "test\\test_widget_scenario.js",
+      "line": 63,
+      "severity": "P2",
+      "category": "cross_feature_import",
+      "description": "Cross-feature import '../src/core/htmlToMd.js' — file in feature 'test' reaches into another feature's internals",
+      "suggestion": "Expose a public API from the other feature and import through it, or move the shared code to a common module",
+      "is_heuristic": true,
+      "source": "stdlib-heuristic",
+      "feature": "test",
+      "target": "../src/core/htmlToMd.js"
+    }
+  ],
+  "has_frontend": true,
+  "has_backend": false,
+  "has_dockerfile": false,
+  "has_ci_cd": false,
+  "has_tests": true,
+  "test_dirs": [
+    "test"
+  ],
+  "dependency_graph": {
+    "export_full.js": [
+      "fs",
+      "path"
+    ],
+    "extract_conversations.js": [
+      "fs",
+      "path"
+    ],
+    "webpack.config.js": [
+      "copy-webpack-plugin",
+      "path"
+    ],
+    "scripts\\generate-icons.js": [
+      "fs",
+      "path",
+      "sharp"
+    ],
+    "src\\background\\service-worker.js": [],
+    "src\\content\\index.js": [],
+    "src\\core\\downloader.js": [],
+    "src\\core\\htmlExporter.js": [],
+    "src\\core\\htmlToMd.js": [],
+    "src\\core\\sanitize.js": [],
+    "src\\core\\types.js": [],
+    "src\\lib\\file-saver.min.js": [],
+    "src\\lib\\jszip.min.js": [],
+    "src\\options\\options.js": [],
+    "src\\platforms\\base.js": [],
+    "src\\platforms\\chatglm.js": [],
+    "src\\popup\\popup.js": [],
+    "test\\test_code_block_patterns.js": [],
+    "test\\test_debug_extraction.js": [
+      "fs",
+      "jsdom"
+    ],
+    "test\\test_full_pipeline.js": [
+      "fs",
+      "jsdom"
+    ],
+    "test\\test_thinking_code_extraction.js": [
+      "fs",
+      "jsdom"
+    ],
+    "test\\test_widget_scenario.js": [
+      "jsdom"
+    ],
+    "userscript\\zhipu-exporter.user.js": []
+  }
+}

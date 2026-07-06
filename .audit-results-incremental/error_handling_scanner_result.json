@@ -1,0 +1,41 @@
+{
+  "project_root": "D:\\Project\\Go_project\\sessiontalk_export",
+  "files_scanned": 23,
+  "total_findings": 2,
+  "severity_distribution": {
+    "P0": 0,
+    "P1": 0,
+    "P2": 2
+  },
+  "category_distribution": {
+    "error_context_lost": 2
+  },
+  "error_handling": {
+    "error_swallowed": 0,
+    "error_context_lost": 2,
+    "error_discarded_cross_module": 0,
+    "unwrap_in_request_path": 0
+  },
+  "findings": [
+    {
+      "file": "src\\lib\\jszip.min.js",
+      "line": 13,
+      "severity": "P2",
+      "category": "error_context_lost",
+      "description": "catch 'e' throws a new error without wrapping the original",
+      "suggestion": "Use `throw new Error('msg', { cause: e })` (ES2022) or include the original in the message",
+      "is_heuristic": true,
+      "source": "stdlib-heuristic"
+    },
+    {
+      "file": "src\\lib\\jszip.min.js",
+      "line": 13,
+      "severity": "P2",
+      "category": "error_context_lost",
+      "description": "catch 'e' throws a new error without wrapping the original",
+      "suggestion": "Use `throw new Error('msg', { cause: e })` (ES2022) or include the original in the message",
+      "is_heuristic": true,
+      "source": "stdlib-heuristic"
+    }
+  ]
+}

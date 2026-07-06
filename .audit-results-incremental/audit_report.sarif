@@ -1,0 +1,234 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "qa-security-audit",
+          "version": "1.11.0",
+          "informationUri": "https://github.com/anthropic/qa-security-audit",
+          "rules": [
+            {
+              "id": "missing_healthcheck",
+              "name": "missing_healthcheck",
+              "shortDescription": {
+                "text": "missing_healthcheck"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              }
+            },
+            {
+              "id": "deployment",
+              "name": "deployment",
+              "shortDescription": {
+                "text": "deployment"
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              }
+            },
+            {
+              "id": "testing",
+              "name": "testing",
+              "shortDescription": {
+                "text": "testing"
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              }
+            },
+            {
+              "id": "secret_history_coverage_gap",
+              "name": "secret_history_coverage_gap",
+              "shortDescription": {
+                "text": "secret_history_coverage_gap"
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              }
+            },
+            {
+              "id": "dev_dep_in_production",
+              "name": "dev_dep_in_production",
+              "shortDescription": {
+                "text": "dev_dep_in_production"
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "missing_healthcheck",
+          "level": "warning",
+          "message": {
+            "text": "No health-check endpoint found (/health, /healthz, /readyz, or Spring actuator) — orchestrators cannot determine service liveness"
+          },
+          "properties": {
+            "severity": "P1",
+            "source_scanner": "observability_scanner"
+          }
+        },
+        {
+          "ruleId": "deployment",
+          "level": "note",
+          "message": {
+            "text": "No Dockerfile found for deployable project"
+          },
+          "properties": {
+            "severity": "P2",
+            "source_scanner": "structure_analyzer"
+          }
+        },
+        {
+          "ruleId": "deployment",
+          "level": "note",
+          "message": {
+            "text": "No CI/CD configuration found"
+          },
+          "properties": {
+            "severity": "P2",
+            "source_scanner": "structure_analyzer"
+          }
+        },
+        {
+          "ruleId": "testing",
+          "level": "note",
+          "message": {
+            "text": "Source directory 'src\\background' has no sibling or nested test directory"
+          },
+          "properties": {
+            "severity": "P2",
+            "source_scanner": "structure_analyzer"
+          }
+        },
+        {
+          "ruleId": "testing",
+          "level": "note",
+          "message": {
+            "text": "Source directory 'src\\content' has no sibling or nested test directory"
+          },
+          "properties": {
+            "severity": "P2",
+            "source_scanner": "structure_analyzer"
+          }
+        },
+        {
+          "ruleId": "testing",
+          "level": "note",
+          "message": {
+            "text": "Source directory 'src\\core' has no sibling or nested test directory"
+          },
+          "properties": {
+            "severity": "P2",
+            "source_scanner": "structure_analyzer"
+          }
+        },
+        {
+          "ruleId": "testing",
+          "level": "note",
+          "message": {
+            "text": "Source directory 'src\\lib' has no sibling or nested test directory"
+          },
+          "properties": {
+            "severity": "P2",
+            "source_scanner": "structure_analyzer"
+          }
+        },
+        {
+          "ruleId": "testing",
+          "level": "note",
+          "message": {
+            "text": "Source directory 'src\\options' has no sibling or nested test directory"
+          },
+          "properties": {
+            "severity": "P2",
+            "source_scanner": "structure_analyzer"
+          }
+        },
+        {
+          "ruleId": "testing",
+          "level": "note",
+          "message": {
+            "text": "Source directory 'src\\platforms' has no sibling or nested test directory"
+          },
+          "properties": {
+            "severity": "P2",
+            "source_scanner": "structure_analyzer"
+          }
+        },
+        {
+          "ruleId": "testing",
+          "level": "note",
+          "message": {
+            "text": "Source directory 'src\\popup' has no sibling or nested test directory"
+          },
+          "properties": {
+            "severity": "P2",
+            "source_scanner": "structure_analyzer"
+          }
+        },
+        {
+          "ruleId": "secret_history_coverage_gap",
+          "level": "note",
+          "message": {
+            "text": "Git history secret scanning did not run; gitleaks/trufflehog unavailable or failed."
+          },
+          "properties": {
+            "severity": "P2",
+            "source_scanner": "secret_history_scanner"
+          }
+        },
+        {
+          "ruleId": "dev_dep_in_production",
+          "level": "note",
+          "message": {
+            "text": "Dev dependency 'copy-webpack-plugin' should not be in production dependencies"
+          },
+          "properties": {
+            "severity": "P2",
+            "source_scanner": "dep_scanner"
+          }
+        },
+        {
+          "ruleId": "dev_dep_in_production",
+          "level": "note",
+          "message": {
+            "text": "Dev dependency 'jsdom' should not be in production dependencies"
+          },
+          "properties": {
+            "severity": "P2",
+            "source_scanner": "dep_scanner"
+          }
+        },
+        {
+          "ruleId": "dev_dep_in_production",
+          "level": "note",
+          "message": {
+            "text": "Dev dependency 'webpack' should not be in production dependencies"
+          },
+          "properties": {
+            "severity": "P2",
+            "source_scanner": "dep_scanner"
+          }
+        },
+        {
+          "ruleId": "dev_dep_in_production",
+          "level": "note",
+          "message": {
+            "text": "Dev dependency 'webpack-cli' should not be in production dependencies"
+          },
+          "properties": {
+            "severity": "P2",
+            "source_scanner": "dep_scanner"
+          }
+        }
+      ]
+    }
+  ]
+}

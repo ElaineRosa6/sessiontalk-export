@@ -1,0 +1,93 @@
+{
+  "project_root": "D:\\Project\\Go_project\\sessiontalk_export",
+  "total_findings": 5,
+  "coverage": {
+    "coverage_source": "test-presence-heuristic",
+    "is_heuristic": true,
+    "overall_percent": 78.26,
+    "per_file": {
+      "src\\lib\\file-saver.min.js": 100.0,
+      "src\\core\\sanitize.js": 100.0,
+      "src\\popup\\popup.js": 100.0,
+      "src\\core\\types.js": 100.0,
+      "src\\core\\downloader.js": 100.0,
+      "userscript\\zhipu-exporter.user.js": 100.0,
+      "src\\lib\\jszip.min.js": 100.0,
+      "src\\background\\service-worker.js": 100.0,
+      "extract_conversations.js": 100.0,
+      "webpack.config.js": 100.0,
+      "src\\content\\index.js": 100.0,
+      "src\\core\\htmlExporter.js": 100.0,
+      "src\\options\\options.js": 100.0,
+      "src\\platforms\\chatglm.js": 100.0,
+      "src\\platforms\\base.js": 100.0,
+      "export_full.js": 100.0,
+      "scripts\\generate-icons.js": 100.0,
+      "src\\core\\htmlToMd.js": 100.0,
+      "test\\test_thinking_code_extraction.js": 0.0,
+      "test\\test_debug_extraction.js": 0.0,
+      "test\\test_full_pipeline.js": 0.0,
+      "test\\test_code_block_patterns.js": 0.0,
+      "test\\test_widget_scenario.js": 0.0
+    }
+  },
+  "test_inventory": {
+    "total_test_files": 0,
+    "total_source_files": 23,
+    "sources_with_tests": 18,
+    "sources_without_tests": 5,
+    "test_source_ratio": 0.0
+  },
+  "findings": [
+    {
+      "file": "test\\test_code_block_patterns.js",
+      "line": 1,
+      "severity": "P2",
+      "category": "untested_source",
+      "description": "Source file has no associated test file",
+      "suggestion": "Create a test file covering this module's public API",
+      "is_heuristic": true,
+      "source": "stdlib-heuristic"
+    },
+    {
+      "file": "test\\test_debug_extraction.js",
+      "line": 1,
+      "severity": "P2",
+      "category": "untested_source",
+      "description": "Source file has no associated test file",
+      "suggestion": "Create a test file covering this module's public API",
+      "is_heuristic": true,
+      "source": "stdlib-heuristic"
+    },
+    {
+      "file": "test\\test_full_pipeline.js",
+      "line": 1,
+      "severity": "P2",
+      "category": "untested_source",
+      "description": "Source file has no associated test file",
+      "suggestion": "Create a test file covering this module's public API",
+      "is_heuristic": true,
+      "source": "stdlib-heuristic"
+    },
+    {
+      "file": "test\\test_thinking_code_extraction.js",
+      "line": 1,
+      "severity": "P2",
+      "category": "untested_source",
+      "description": "Source file has no associated test file",
+      "suggestion": "Create a test file covering this module's public API",
+      "is_heuristic": true,
+      "source": "stdlib-heuristic"
+    },
+    {
+      "file": "test\\test_widget_scenario.js",
+      "line": 1,
+      "severity": "P2",
+      "category": "untested_source",
+      "description": "Source file has no associated test file",
+      "suggestion": "Create a test file covering this module's public API",
+      "is_heuristic": true,
+      "source": "stdlib-heuristic"
+    }
+  ]
+}

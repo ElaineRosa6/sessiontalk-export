@@ -1,0 +1,67 @@
+{
+  "project_root": "D:\\Project\\Go_project\\sessiontalk_export",
+  "files_scanned": 23,
+  "total_findings": 4,
+  "severity_distribution": {
+    "P0": 0,
+    "P1": 1,
+    "P2": 3
+  },
+  "category_distribution": {
+    "high_complexity": 1,
+    "long_function": 2,
+    "long_file": 1
+  },
+  "metrics_summary": {
+    "total_functions": 90,
+    "avg_cyclomatic": 3.72,
+    "max_cyclomatic": 16,
+    "functions_over_threshold": 1
+  },
+  "findings": [
+    {
+      "file": "export_full.js",
+      "line": 59,
+      "severity": "P1",
+      "category": "high_complexity",
+      "description": "Function 'htmlToMd' has cyclomatic complexity 16 (threshold 15)",
+      "suggestion": "Extract branches into helper functions or use a dispatch table. High complexity correlates with defect density and untested edge cases.",
+      "metric": 16,
+      "threshold": 15,
+      "function": "htmlToMd"
+    },
+    {
+      "file": "export_full.js",
+      "line": 59,
+      "severity": "P2",
+      "category": "long_function",
+      "description": "Function 'htmlToMd' spans 155 lines (threshold 80)",
+      "suggestion": "Split into smaller focused functions. Long functions mix responsibilities and are hard to test in isolation.",
+      "metric": 155,
+      "threshold": 80,
+      "function": "htmlToMd"
+    },
+    {
+      "file": "src\\content\\index.js",
+      "line": 1,
+      "severity": "P2",
+      "category": "long_file",
+      "description": "File 'src\\content\\index.js' has 643 lines (threshold 500)",
+      "suggestion": "Split the file into cohesive modules. Large files are hard to navigate, review, and test; they also tend to accumulate unrelated responsibilities.",
+      "metric": 643,
+      "threshold": 500,
+      "function": null
+    },
+    {
+      "file": "src\\core\\htmlToMd.js",
+      "line": 150,
+      "severity": "P2",
+      "category": "long_function",
+      "description": "Function 'extractCodeBlocks' spans 110 lines (threshold 80)",
+      "suggestion": "Split into smaller focused functions. Long functions mix responsibilities and are hard to test in isolation.",
+      "metric": 110,
+      "threshold": 80,
+      "function": "extractCodeBlocks"
+    }
+  ]
+}

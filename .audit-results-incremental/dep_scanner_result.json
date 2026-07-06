@@ -1,0 +1,109 @@
+{
+  "project_root": "D:/Project/Go_project/sessiontalk_export",
+  "total_dependencies": 7,
+  "ecosystem_distribution": {
+    "npm": 7
+  },
+  "dependencies": [
+    {
+      "name": "file-saver",
+      "version": "2.0.5",
+      "version_spec": "^2.0.5",
+      "ecosystem": "npm",
+      "type": "dependencies"
+    },
+    {
+      "name": "jszip",
+      "version": "3.10.1",
+      "version_spec": "^3.10.1",
+      "ecosystem": "npm",
+      "type": "dependencies"
+    },
+    {
+      "name": "turndown",
+      "version": "7.2.0",
+      "version_spec": "^7.2.0",
+      "ecosystem": "npm",
+      "type": "dependencies"
+    },
+    {
+      "name": "copy-webpack-plugin",
+      "version": "11.0.0",
+      "version_spec": "^11.0.0",
+      "ecosystem": "npm",
+      "type": "devDependencies"
+    },
+    {
+      "name": "jsdom",
+      "version": "29.1.1",
+      "version_spec": "^29.1.1",
+      "ecosystem": "npm",
+      "type": "devDependencies"
+    },
+    {
+      "name": "webpack",
+      "version": "5.88.0",
+      "version_spec": "^5.88.0",
+      "ecosystem": "npm",
+      "type": "devDependencies"
+    },
+    {
+      "name": "webpack-cli",
+      "version": "5.1.4",
+      "version_spec": "^5.1.4",
+      "ecosystem": "npm",
+      "type": "devDependencies"
+    }
+  ],
+  "vulnerabilities": [],
+  "risky_patterns": [
+    {
+      "package": "copy-webpack-plugin",
+      "severity": "P2",
+      "category": "dev_dep_in_production",
+      "description": "Dev dependency 'copy-webpack-plugin' should not be in production dependencies",
+      "suggestion": "Move to devDependencies and ensure build process excludes it"
+    },
+    {
+      "package": "jsdom",
+      "severity": "P2",
+      "category": "dev_dep_in_production",
+      "description": "Dev dependency 'jsdom' should not be in production dependencies",
+      "suggestion": "Move to devDependencies and ensure build process excludes it"
+    },
+    {
+      "package": "webpack",
+      "severity": "P2",
+      "category": "dev_dep_in_production",
+      "description": "Dev dependency 'webpack' should not be in production dependencies",
+      "suggestion": "Move to devDependencies and ensure build process excludes it"
+    },
+    {
+      "package": "webpack-cli",
+      "severity": "P2",
+      "category": "dev_dep_in_production",
+      "description": "Dev dependency 'webpack-cli' should not be in production dependencies",
+      "suggestion": "Move to devDependencies and ensure build process excludes it"
+    }
+  ],
+  "lockfile_issues": [],
+  "severity_distribution": {
+    "P2": 4
+  },
+  "npm_audit_available": false,
+  "pip_audit_available": false,
+  "govulncheck_available": false,
+  "cargo_audit_available": false,
+  "npm_audit_results": null,
+  "pip_audit_results": null,
+  "govulncheck_results": null,
+  "cargo_audit_results": null,
+  "offline_cve_coverage": [
+    "npm"
+  ],
+  "cve_coverage": [
+    "npm"
+  ],
+  "cve_coverage_gap": [],
+  "native_auditor_sources": {}
+}

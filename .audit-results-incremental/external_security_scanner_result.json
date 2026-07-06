@@ -1,0 +1,34 @@
+{
+  "project_root": "D:\\Project\\Go_project\\sessiontalk_export",
+  "tools": {
+    "semgrep": {
+      "available": false,
+      "findings": 0
+    },
+    "bandit": {
+      "available": true,
+      "findings": 0
+    },
+    "gosec": {
+      "available": false,
+      "findings": 0
+    }
+  },
+  "external_security": {
+    "tools_available": [
+      "bandit"
+    ],
+    "tools_missing": [
+      "semgrep",
+      "gosec"
+    ],
+    "total_findings": 0
+  },
+  "findings": [],
+  "total_findings": 0,
+  "severity_distribution": {
+    "P0": 0,
+    "P1": 0,
+    "P2": 0
+  }
+}

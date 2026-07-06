@@ -1,0 +1,1289 @@
+{
+  "project_root": "D:\\Project\\Go_project\\sessiontalk_export",
+  "total_findings": 88,
+  "duplication": {
+    "source": "stdlib-hash",
+    "block_size_lines": 6,
+    "clone_clusters": 76,
+    "duplicated_lines_total": 456
+  },
+  "dead_code": {
+    "source": "stdlib-heuristic",
+    "is_heuristic": true,
+    "unused_symbols": 12
+  },
+  "findings": [
+    {
+      "file": "export_full.js",
+      "line": 46,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "function striphtmltags ( htmlstr ) {\nreturn htmlstr\n. replace ( / < br \\ s * \\ / ? > / g , string )\n. replace ( / < [ ^ > ] + > / g , string )\n. replace ( / & lt ; / g , string )\n. replace ( / & gt ; "
+    },
+    {
+      "file": "export_full.js",
+      "line": 47,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "return htmlstr\n. replace ( / < br \\ s * \\ / ? > / g , string )\n. replace ( / < [ ^ > ] + > / g , string )\n. replace ( / & lt ; / g , string )\n. replace ( / & gt ; / g , string )\n. replace ( / & amp ; "
+    },
+    {
+      "file": "export_full.js",
+      "line": 48,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": ". replace ( / < br \\ s * \\ / ? > / g , string )\n. replace ( / < [ ^ > ] + > / g , string )\n. replace ( / & lt ; / g , string )\n. replace ( / & gt ; / g , string )\n. replace ( / & amp ; / g , string )\n"
+    },
+    {
+      "file": "export_full.js",
+      "line": 49,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": ". replace ( / < [ ^ > ] + > / g , string )\n. replace ( / & lt ; / g , string )\n. replace ( / & gt ; / g , string )\n. replace ( / & amp ; / g , string )\n. replace ( / & quot ; / g , string )\n. replace "
+    },
+    {
+      "file": "export_full.js",
+      "line": 50,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": ". replace ( / & lt ; / g , string )\n. replace ( / & gt ; / g , string )\n. replace ( / & amp ; / g , string )\n. replace ( / & quot ; / g , string )\n. replace ( / & # NUM ; / g , string )\n. replace ( / "
+    },
+    {
+      "file": "export_full.js",
+      "line": 51,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": ". replace ( / & gt ; / g , string )\n. replace ( / & amp ; / g , string )\n. replace ( / & quot ; / g , string )\n. replace ( / & # NUM ; / g , string )\n. replace ( / & nbsp ; / g , string ) ;\n}"
+    },
+    {
+      "file": "export_full.js",
+      "line": 52,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": ". replace ( / & amp ; / g , string )\n. replace ( / & quot ; / g , string )\n. replace ( / & # NUM ; / g , string )\n. replace ( / & nbsp ; / g , string ) ;\n}\n"
+    },
+    {
+      "file": "export_full.js",
+      "line": 90,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "\n\nconst contentstart = md . indexof ( string , preidx ) + NUM ;\nlet codecontent = md . substring ( contentstart , precloseidx ) ;\ncodecontent = codecontent\n. replace ( / < br \\ s * \\ / ? > / g , strin"
+    },
+    {
+      "file": "export_full.js",
+      "line": 91,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "\nconst contentstart = md . indexof ( string , preidx ) + NUM ;\nlet codecontent = md . substring ( contentstart , precloseidx ) ;\ncodecontent = codecontent\n. replace ( / < br \\ s * \\ / ? > / g , string"
+    },
+    {
+      "file": "export_full.js",
+      "line": 92,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "const contentstart = md . indexof ( string , preidx ) + NUM ;\nlet codecontent = md . substring ( contentstart , precloseidx ) ;\ncodecontent = codecontent\n. replace ( / < br \\ s * \\ / ? > / g , string "
+    },
+    {
+      "file": "export_full.js",
+      "line": 93,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "let codecontent = md . substring ( contentstart , precloseidx ) ;\ncodecontent = codecontent\n. replace ( / < br \\ s * \\ / ? > / g , string )\n. replace ( / < [ ^ > ] + > / g , string )\n. replace ( / & l"
+    },
+    {
+      "file": "export_full.js",
+      "line": 94,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "codecontent = codecontent\n. replace ( / < br \\ s * \\ / ? > / g , string )\n. replace ( / < [ ^ > ] + > / g , string )\n. replace ( / & lt ; / g , string )\n. replace ( / & gt ; / g , string )\n. replace ("
+    },
+    {
+      "file": "export_full.js",
+      "line": 97,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": ". replace ( / & lt ; / g , string )\n. replace ( / & gt ; / g , string )\n. replace ( / & amp ; / g , string )\n. replace ( / & quot ; / g , string )\n. replace ( / & # NUM ; / g , string )\n. replace ( / "
+    },
+    {
+      "file": "export_full.js",
+      "line": 124,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "let tablemd = string ;\nconst rows = tablehtml . match ( / < tr [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / tr > / g ) ;\nif ( ! rows ) return match ;\nrows . foreach ( ( row , ri ) = > {\nconst cells = row . m"
+    },
+    {
+      "file": "export_full.js",
+      "line": 125,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "const rows = tablehtml . match ( / < tr [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / tr > / g ) ;\nif ( ! rows ) return match ;\nrows . foreach ( ( row , ri ) = > {\nconst cells = row . match ( / < ( td | th ) "
+    },
+    {
+      "file": "export_full.js",
+      "line": 126,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "if ( ! rows ) return match ;\nrows . foreach ( ( row , ri ) = > {\nconst cells = row . match ( / < ( td | th ) [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / \\ NUM > / g ) ;\nif ( ! cells ) return ;\nconst celltex"
+    },
+    {
+      "file": "export_full.js",
+      "line": 127,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "rows . foreach ( ( row , ri ) = > {\nconst cells = row . match ( / < ( td | th ) [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / \\ NUM > / g ) ;\nif ( ! cells ) return ;\nconst celltexts = cells . map ( c = > {\nre"
+    },
+    {
+      "file": "export_full.js",
+      "line": 128,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "const cells = row . match ( / < ( td | th ) [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / \\ NUM > / g ) ;\nif ( ! cells ) return ;\nconst celltexts = cells . map ( c = > {\nreturn c . replace ( / < \\ / ? ( td | "
+    },
+    {
+      "file": "export_full.js",
+      "line": 129,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "if ( ! cells ) return ;\nconst celltexts = cells . map ( c = > {\nreturn c . replace ( / < \\ / ? ( td | th ) [ ^ > ] * > / g , string ) . trim ( )\n. replace ( / < strong > / g , string ) . replace ( / <"
+    },
+    {
+      "file": "export_full.js",
+      "line": 130,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "const celltexts = cells . map ( c = > {\nreturn c . replace ( / < \\ / ? ( td | th ) [ ^ > ] * > / g , string ) . trim ( )\n. replace ( / < strong > / g , string ) . replace ( / < \\ / strong > / g , stri"
+    },
+    {
+      "file": "export_full.js",
+      "line": 131,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "return c . replace ( / < \\ / ? ( td | th ) [ ^ > ] * > / g , string ) . trim ( )\n. replace ( / < strong > / g , string ) . replace ( / < \\ / strong > / g , string )\n. replace ( / < em > / g , string )"
+    },
+    {
+      "file": "export_full.js",
+      "line": 132,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": ". replace ( / < strong > / g , string ) . replace ( / < \\ / strong > / g , string )\n. replace ( / < em > / g , string ) . replace ( / < \\ / em > / g , string ) ;\n} ) ;\ntablemd + = string + celltexts ."
+    },
+    {
+      "file": "export_full.js",
+      "line": 133,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": ". replace ( / < em > / g , string ) . replace ( / < \\ / em > / g , string ) ;\n} ) ;\ntablemd + = string + celltexts . join ( string ) + string ;\nif ( ri = = = NUM ) tablemd + = string + celltexts . map"
+    },
+    {
+      "file": "export_full.js",
+      "line": 134,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "} ) ;\ntablemd + = string + celltexts . join ( string ) + string ;\nif ( ri = = = NUM ) tablemd + = string + celltexts . map ( ( ) = > string ) . join ( string ) + string ;\n} ) ;\nreturn tablemd ;\n} ) ;"
+    },
+    {
+      "file": "export_full.js",
+      "line": 140,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "\n\nmd = md . replace ( / < h1 [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / h1 > / gi , string ) ;\nmd = md . replace ( / < h2 [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / h2 > / gi , string ) ;\nmd = md . replace ( / "
+    },
+    {
+      "file": "export_full.js",
+      "line": 141,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "\nmd = md . replace ( / < h1 [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / h1 > / gi , string ) ;\nmd = md . replace ( / < h2 [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / h2 > / gi , string ) ;\nmd = md . replace ( / <"
+    },
+    {
+      "file": "export_full.js",
+      "line": 142,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "md = md . replace ( / < h1 [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / h1 > / gi , string ) ;\nmd = md . replace ( / < h2 [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / h2 > / gi , string ) ;\nmd = md . replace ( / < "
+    },
+    {
+      "file": "export_full.js",
+      "line": 143,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "md = md . replace ( / < h2 [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / h2 > / gi , string ) ;\nmd = md . replace ( / < h3 [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / h3 > / gi , string ) ;\nmd = md . replace ( / < "
+    },
+    {
+      "file": "export_full.js",
+      "line": 144,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "md = md . replace ( / < h3 [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / h3 > / gi , string ) ;\nmd = md . replace ( / < h4 [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / h4 > / gi , string ) ;\n\n\nmd = md . replace ( / "
+    },
+    {
+      "file": "export_full.js",
+      "line": 145,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "md = md . replace ( / < h4 [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / h4 > / gi , string ) ;\n\n\nmd = md . replace ( / < strong [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / strong > / g , string ) ;\nmd = md . repla"
+    },
+    {
+      "file": "export_full.js",
+      "line": 146,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "\n\nmd = md . replace ( / < strong [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / strong > / g , string ) ;\nmd = md . replace ( / < b [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / b > / g , string ) ;\nmd = md . replace "
+    },
+    {
+      "file": "export_full.js",
+      "line": 147,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "\nmd = md . replace ( / < strong [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / strong > / g , string ) ;\nmd = md . replace ( / < b [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / b > / g , string ) ;\nmd = md . replace ("
+    },
+    {
+      "file": "export_full.js",
+      "line": 148,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "md = md . replace ( / < strong [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / strong > / g , string ) ;\nmd = md . replace ( / < b [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / b > / g , string ) ;\nmd = md . replace ( "
+    },
+    {
+      "file": "export_full.js",
+      "line": 149,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "md = md . replace ( / < b [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / b > / g , string ) ;\nmd = md . replace ( / < em [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / em > / g , string ) ;\nmd = md . replace ( / < i [ "
+    },
+    {
+      "file": "export_full.js",
+      "line": 160,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "} ) ;\n\n\nmd = md . replace ( / < a [ ^ > ] * href = string ] + ) string\n\n"
+    },
+    {
+      "file": "export_full.js",
+      "line": 161,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "\n\nmd = md . replace ( / < a [ ^ > ] * href = string ] + ) string\n\n\nmd = md . replace ( / < br \\ s * \\ / ? > / g , string ) ;"
+    },
+    {
+      "file": "export_full.js",
+      "line": 162,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "\nmd = md . replace ( / < a [ ^ > ] * href = string ] + ) string\n\n\nmd = md . replace ( / < br \\ s * \\ / ? > / g , string ) ;\n"
+    },
+    {
+      "file": "export_full.js",
+      "line": 163,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "md = md . replace ( / < a [ ^ > ] * href = string ] + ) string\n\n\nmd = md . replace ( / < br \\ s * \\ / ? > / g , string ) ;\n\n"
+    },
+    {
+      "file": "export_full.js",
+      "line": 164,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "\n\nmd = md . replace ( / < br \\ s * \\ / ? > / g , string ) ;\n\n\nmd = md . replace ( / < hr \\ s * \\ / ? > / g , string ) ;"
+    },
+    {
+      "file": "export_full.js",
+      "line": 165,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "\nmd = md . replace ( / < br \\ s * \\ / ? > / g , string ) ;\n\n\nmd = md . replace ( / < hr \\ s * \\ / ? > / g , string ) ;\n"
+    },
+    {
+      "file": "export_full.js",
+      "line": 166,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "md = md . replace ( / < br \\ s * \\ / ? > / g , string ) ;\n\n\nmd = md . replace ( / < hr \\ s * \\ / ? > / g , string ) ;\n\n"
+    },
+    {
+      "file": "export_full.js",
+      "line": 167,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "\n\nmd = md . replace ( / < hr \\ s * \\ / ? > / g , string ) ;\n\n\nmd = md . replace ( / < ul [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / ul > / g , ( match , content ) = > {"
+    },
+    {
+      "file": "export_full.js",
+      "line": 168,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "\nmd = md . replace ( / < hr \\ s * \\ / ? > / g , string ) ;\n\n\nmd = md . replace ( / < ul [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / ul > / g , ( match , content ) = > {\nreturn string + content . replace ( /"
+    },
+    {
+      "file": "export_full.js",
+      "line": 169,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "md = md . replace ( / < hr \\ s * \\ / ? > / g , string ) ;\n\n\nmd = md . replace ( / < ul [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / ul > / g , ( match , content ) = > {\nreturn string + content . replace ( / "
+    },
+    {
+      "file": "export_full.js",
+      "line": 170,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "\n\nmd = md . replace ( / < ul [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / ul > / g , ( match , content ) = > {\nreturn string + content . replace ( / < li [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / li > / g , stri"
+    },
+    {
+      "file": "export_full.js",
+      "line": 171,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "\nmd = md . replace ( / < ul [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / ul > / g , ( match , content ) = > {\nreturn string + content . replace ( / < li [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / li > / g , strin"
+    },
+    {
+      "file": "export_full.js",
+      "line": 181,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "\n\nmd = md . replace ( / < blockquote [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / blockquote > / g , string ) ;\n\n\nmd = md . replace ( / < [ ^ > ] + > / g , string ) ;"
+    },
+    {
+      "file": "export_full.js",
+      "line": 182,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "\nmd = md . replace ( / < blockquote [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / blockquote > / g , string ) ;\n\n\nmd = md . replace ( / < [ ^ > ] + > / g , string ) ;\n"
+    },
+    {
+      "file": "export_full.js",
+      "line": 183,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "md = md . replace ( / < blockquote [ ^ > ] * > ( [ \\ s \\ s ] * ? ) < \\ / blockquote > / g , string ) ;\n\n\nmd = md . replace ( / < [ ^ > ] + > / g , string ) ;\n\n"
+    },
+    {
+      "file": "export_full.js",
+      "line": 184,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "\n\nmd = md . replace ( / < [ ^ > ] + > / g , string ) ;\n\n\ncodeblocks . foreach ( ( block , i ) = > {"
+    },
+    {
+      "file": "export_full.js",
+      "line": 185,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "\nmd = md . replace ( / < [ ^ > ] + > / g , string ) ;\n\n\ncodeblocks . foreach ( ( block , i ) = > {\nmd = md . replace ( string , string ) ;"
+    },
+    {
+      "file": "export_full.js",
+      "line": 186,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "md = md . replace ( / < [ ^ > ] + > / g , string ) ;\n\n\ncodeblocks . foreach ( ( block , i ) = > {\nmd = md . replace ( string , string ) ;\n} ) ;"
+    },
+    {
+      "file": "export_full.js",
+      "line": 187,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "\n\ncodeblocks . foreach ( ( block , i ) = > {\nmd = md . replace ( string , string ) ;\n} ) ;\n"
+    },
+    {
+      "file": "export_full.js",
+      "line": 188,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "\ncodeblocks . foreach ( ( block , i ) = > {\nmd = md . replace ( string , string ) ;\n} ) ;\n\n"
+    },
+    {
+      "file": "export_full.js",
+      "line": 207,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "\n\nmd = md . replace ( / \\ n { NUM , } / g , string ) ;\nmd = md . trim ( ) ;\n\nreturn md ;"
+    },
+    {
+      "file": "export_full.js",
+      "line": 208,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "\nmd = md . replace ( / \\ n { NUM , } / g , string ) ;\nmd = md . trim ( ) ;\n\nreturn md ;\n}"
+    },
+    {
+      "file": "export_full.js",
+      "line": 209,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "src\\core\\htmlToMd.js"
+      ],
+      "block_lines": 6,
+      "snippet": "md = md . replace ( / \\ n { NUM , } / g , string ) ;\nmd = md . trim ( ) ;\n\nreturn md ;\n}\n"
+    },
+    {
+      "file": "test\\test_debug_extraction.js",
+      "line": 8,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "test\\test_widget_scenario.js"
+      ],
+      "block_lines": 6,
+      "snippet": "const dom = new jsdom ( html ) ;\nglobal . document = dom . window . document ;\n\nimport { chatglmadapter } from string ;\nconst adapter = new chatglmadapter ( ) ;\n"
+    },
+    {
+      "file": "test\\test_debug_extraction.js",
+      "line": 9,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "test\\test_widget_scenario.js"
+      ],
+      "block_lines": 6,
+      "snippet": "global . document = dom . window . document ;\n\nimport { chatglmadapter } from string ;\nconst adapter = new chatglmadapter ( ) ;\n\nconst item = document . queryselector ( string ) ;"
+    },
+    {
+      "file": "test\\test_full_pipeline.js",
+      "line": 3,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "test\\test_thinking_code_extraction.js"
+      ],
+      "block_lines": 6,
+      "snippet": "* /\nimport { jsdom } from string ;\nimport { readfilesync } from string ;\n\n\nconst html = readfilesync ( string , string ) ;"
+    },
+    {
+      "file": "test\\test_full_pipeline.js",
+      "line": 4,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "test\\test_thinking_code_extraction.js"
+      ],
+      "block_lines": 6,
+      "snippet": "import { jsdom } from string ;\nimport { readfilesync } from string ;\n\n\nconst html = readfilesync ( string , string ) ;\nconst dom = new jsdom ( html ) ;"
+    },
+    {
+      "file": "test\\test_full_pipeline.js",
+      "line": 5,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "test\\test_thinking_code_extraction.js"
+      ],
+      "block_lines": 6,
+      "snippet": "import { readfilesync } from string ;\n\n\nconst html = readfilesync ( string , string ) ;\nconst dom = new jsdom ( html ) ;\nglobal . document = dom . window . document ;"
+    },
+    {
+      "file": "test\\test_full_pipeline.js",
+      "line": 6,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "test\\test_thinking_code_extraction.js"
+      ],
+      "block_lines": 6,
+      "snippet": "\n\nconst html = readfilesync ( string , string ) ;\nconst dom = new jsdom ( html ) ;\nglobal . document = dom . window . document ;\n"
+    },
+    {
+      "file": "test\\test_full_pipeline.js",
+      "line": 7,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "test\\test_thinking_code_extraction.js"
+      ],
+      "block_lines": 6,
+      "snippet": "\nconst html = readfilesync ( string , string ) ;\nconst dom = new jsdom ( html ) ;\nglobal . document = dom . window . document ;\n\n"
+    },
+    {
+      "file": "test\\test_full_pipeline.js",
+      "line": 8,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "test\\test_thinking_code_extraction.js"
+      ],
+      "block_lines": 6,
+      "snippet": "const html = readfilesync ( string , string ) ;\nconst dom = new jsdom ( html ) ;\nglobal . document = dom . window . document ;\n\n\nimport { chatglmadapter } from string ;"
+    },
+    {
+      "file": "test\\test_full_pipeline.js",
+      "line": 9,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "test\\test_thinking_code_extraction.js"
+      ],
+      "block_lines": 6,
+      "snippet": "const dom = new jsdom ( html ) ;\nglobal . document = dom . window . document ;\n\n\nimport { chatglmadapter } from string ;\n"
+    },
+    {
+      "file": "test\\test_full_pipeline.js",
+      "line": 17,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "test\\test_thinking_code_extraction.js"
+      ],
+      "block_lines": 6,
+      "snippet": "\nconst adapter = new chatglmadapter ( ) ;\nconst item = document . queryselector ( string ) ;\n\nconsole . log ( string ) ;\n"
+    },
+    {
+      "file": "test\\test_full_pipeline.js",
+      "line": 21,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "test\\test_widget_scenario.js"
+      ],
+      "block_lines": 6,
+      "snippet": "console . log ( string ) ;\n\n\nconst aimsg = adapter . _extractassistantmessage ( item ) ;\nif ( ! aimsg ) {\nconsole . log ( string ) ;"
+    },
+    {
+      "file": "test\\test_full_pipeline.js",
+      "line": 22,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "test\\test_widget_scenario.js"
+      ],
+      "block_lines": 6,
+      "snippet": "\n\nconst aimsg = adapter . _extractassistantmessage ( item ) ;\nif ( ! aimsg ) {\nconsole . log ( string ) ;\nprocess . exit ( NUM ) ;"
+    },
+    {
+      "file": "test\\test_full_pipeline.js",
+      "line": 23,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "test\\test_widget_scenario.js"
+      ],
+      "block_lines": 6,
+      "snippet": "\nconst aimsg = adapter . _extractassistantmessage ( item ) ;\nif ( ! aimsg ) {\nconsole . log ( string ) ;\nprocess . exit ( NUM ) ;\n}"
+    },
+    {
+      "file": "test\\test_full_pipeline.js",
+      "line": 24,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "test\\test_widget_scenario.js"
+      ],
+      "block_lines": 6,
+      "snippet": "const aimsg = adapter . _extractassistantmessage ( item ) ;\nif ( ! aimsg ) {\nconsole . log ( string ) ;\nprocess . exit ( NUM ) ;\n}\n"
+    },
+    {
+      "file": "test\\test_full_pipeline.js",
+      "line": 44,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "test\\test_thinking_code_extraction.js"
+      ],
+      "block_lines": 6,
+      "snippet": "console . log ( string ) ;\nconsole . log ( string ) ;\nconsole . log ( string ) ;\n\nif ( hashtmlcodeblock & & hascsscodeblock ) {\nconsole . log ( string ) ;"
+    },
+    {
+      "file": "test\\test_full_pipeline.js",
+      "line": 45,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "test\\test_thinking_code_extraction.js"
+      ],
+      "block_lines": 6,
+      "snippet": "console . log ( string ) ;\nconsole . log ( string ) ;\n\nif ( hashtmlcodeblock & & hascsscodeblock ) {\nconsole . log ( string ) ;\n} else {"
+    },
+    {
+      "file": "test\\test_full_pipeline.js",
+      "line": 46,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "test\\test_thinking_code_extraction.js"
+      ],
+      "block_lines": 6,
+      "snippet": "console . log ( string ) ;\n\nif ( hashtmlcodeblock & & hascsscodeblock ) {\nconsole . log ( string ) ;\n} else {\nconsole . log ( string ) ;"
+    },
+    {
+      "file": "test\\test_full_pipeline.js",
+      "line": 47,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "test\\test_thinking_code_extraction.js"
+      ],
+      "block_lines": 6,
+      "snippet": "\nif ( hashtmlcodeblock & & hascsscodeblock ) {\nconsole . log ( string ) ;\n} else {\nconsole . log ( string ) ;\nprocess . exit ( NUM ) ;"
+    },
+    {
+      "file": "test\\test_full_pipeline.js",
+      "line": 48,
+      "severity": "P2",
+      "category": "duplicated_block",
+      "description": "Copied code block (6 lines) across 2 files",
+      "suggestion": "Extract the duplicated logic into a shared utility, library, or base class",
+      "is_heuristic": false,
+      "source": "stdlib-hash",
+      "duplicated_in": [
+        "test\\test_thinking_code_extraction.js"
+      ],
+      "block_lines": 6,
+      "snippet": "if ( hashtmlcodeblock & & hascsscodeblock ) {\nconsole . log ( string ) ;\n} else {\nconsole . log ( string ) ;\nprocess . exit ( NUM ) ;\n}"
+    },
+    {
+      "file": "export_full.js",
+      "line": 1,
+      "severity": "P2",
+      "category": "potentially_unused",
+      "description": "Module-level symbol 'extractAndSaveImages' appears to have zero project-wide references",
+      "suggestion": "Verify not accessed via reflection, dynamic dispatch, or framework registration; then remove or export intentionally",
+      "is_heuristic": true,
+      "source": "stdlib-heuristic",
+      "function": "extractAndSaveImages"
+    },
+    {
+      "file": "extract_conversations.js",
+      "line": 1,
+      "severity": "P2",
+      "category": "potentially_unused",
+      "description": "Module-level symbol 'extractQuestionText' appears to have zero project-wide references",
+      "suggestion": "Verify not accessed via reflection, dynamic dispatch, or framework registration; then remove or export intentionally",
+      "is_heuristic": true,
+      "source": "stdlib-heuristic",
+      "function": "extractQuestionText"
+    },
+    {
+      "file": "scripts\\generate-icons.js",
+      "line": 1,
+      "severity": "P2",
+      "category": "potentially_unused",
+      "description": "Module-level symbol 'createSvgIcon' appears to have zero project-wide references",
+      "suggestion": "Verify not accessed via reflection, dynamic dispatch, or framework registration; then remove or export intentionally",
+      "is_heuristic": true,
+      "source": "stdlib-heuristic",
+      "function": "createSvgIcon"
+    },
+    {
+      "file": "src\\content\\index.js",
+      "line": 1,
+      "severity": "P2",
+      "category": "potentially_unused",
+      "description": "Module-level symbol 'convertConversation' appears to have zero project-wide references",
+      "suggestion": "Verify not accessed via reflection, dynamic dispatch, or framework registration; then remove or export intentionally",
+      "is_heuristic": true,
+      "source": "stdlib-heuristic",
+      "function": "convertConversation"
+    },
+    {
+      "file": "src\\core\\downloader.js",
+      "line": 1,
+      "severity": "P2",
+      "category": "potentially_unused",
+      "description": "Module-level symbol 'datedFilename' appears to have zero project-wide references",
+      "suggestion": "Verify not accessed via reflection, dynamic dispatch, or framework registration; then remove or export intentionally",
+      "is_heuristic": true,
+      "source": "stdlib-heuristic",
+      "function": "datedFilename"
+    },
+    {
+      "file": "src\\core\\htmlExporter.js",
+      "line": 1,
+      "severity": "P2",
+      "category": "potentially_unused",
+      "description": "Module-level symbol 'conversationToHtml' appears to have zero project-wide references",
+      "suggestion": "Verify not accessed via reflection, dynamic dispatch, or framework registration; then remove or export intentionally",
+      "is_heuristic": true,
+      "source": "stdlib-heuristic",
+      "function": "conversationToHtml"
+    },
+    {
+      "file": "src\\core\\htmlToMd.js",
+      "line": 1,
+      "severity": "P2",
+      "category": "potentially_unused",
+      "description": "Module-level symbol 'convertOrderedLists' appears to have zero project-wide references",
+      "suggestion": "Verify not accessed via reflection, dynamic dispatch, or framework registration; then remove or export intentionally",
+      "is_heuristic": true,
+      "source": "stdlib-heuristic",
+      "function": "convertOrderedLists"
+    },
+    {
+      "file": "src\\core\\sanitize.js",
+      "line": 1,
+      "severity": "P2",
+      "category": "potentially_unused",
+      "description": "Module-level symbol 'escapeHtml' appears to have zero project-wide references",
+      "suggestion": "Verify not accessed via reflection, dynamic dispatch, or framework registration; then remove or export intentionally",
+      "is_heuristic": true,
+      "source": "stdlib-heuristic",
+      "function": "escapeHtml"
+    },
+    {
+      "file": "src\\options\\options.js",
+      "line": 1,
+      "severity": "P2",
+      "category": "potentially_unused",
+      "description": "Module-level symbol 'OptionsController' appears to have zero project-wide references",
+      "suggestion": "Verify not accessed via reflection, dynamic dispatch, or framework registration; then remove or export intentionally",
+      "is_heuristic": true,
+      "source": "stdlib-heuristic",
+      "function": "OptionsController"
+    },
+    {
+      "file": "src\\platforms\\base.js",
+      "line": 1,
+      "severity": "P2",
+      "category": "potentially_unused",
+      "description": "Module-level symbol 'BasePlatformAdapter' appears to have zero project-wide references",
+      "suggestion": "Verify not accessed via reflection, dynamic dispatch, or framework registration; then remove or export intentionally",
+      "is_heuristic": true,
+      "source": "stdlib-heuristic",
+      "function": "BasePlatformAdapter"
+    },
+    {
+      "file": "src\\platforms\\chatglm.js",
+      "line": 1,
+      "severity": "P2",
+      "category": "potentially_unused",
+      "description": "Module-level symbol 'ChatGLMAdapter' appears to have zero project-wide references",
+      "suggestion": "Verify not accessed via reflection, dynamic dispatch, or framework registration; then remove or export intentionally",
+      "is_heuristic": true,
+      "source": "stdlib-heuristic",
+      "function": "ChatGLMAdapter"
+    },
+    {
+      "file": "src\\popup\\popup.js",
+      "line": 1,
+      "severity": "P2",
+      "category": "potentially_unused",
+      "description": "Module-level symbol 'PopupController' appears to have zero project-wide references",
+      "suggestion": "Verify not accessed via reflection, dynamic dispatch, or framework registration; then remove or export intentionally",
+      "is_heuristic": true,
+      "source": "stdlib-heuristic",
+      "function": "PopupController"
+    }
+  ]
+}

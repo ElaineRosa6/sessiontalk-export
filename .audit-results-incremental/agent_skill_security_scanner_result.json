@@ -1,0 +1,197 @@
+{
+  "metadata": {
+    "version": "1.11.0",
+    "generated_at": "2026-07-06T06:19:31.660624+00:00",
+    "scanner": "agent_skill_security_scanner"
+  },
+  "project_root": "D:\\Project\\Go_project\\sessiontalk_export",
+  "files_scanned": 38,
+  "total_findings": 14,
+  "severity_distribution": {
+    "P0": 14,
+    "P1": 0,
+    "P2": 0
+  },
+  "category_distribution": {
+    "agent_plaintext_secret": 14
+  },
+  "agent_skill_security": {
+    "artifact_counts": {
+      "skill_files": 0,
+      "agent_instruction_files": 16,
+      "mcp_config_files": 0,
+      "json_config_files": 0
+    },
+    "mcp_servers": 0,
+    "overbroad_permissions": 0,
+    "plaintext_secret_keys": 14,
+    "coverage_gaps": [
+      {
+        "severity": "P2",
+        "category": "agent_skill_security_coverage_gap",
+        "description": "No SKILL.md or MCP config detected; agent-skill-specific checks were limited to generic instruction/config files.",
+        "suggestion": "If this repository contains agent behavior, add SKILL.md/MCP config paths or run this scanner against the skill package root.",
+        "file": null,
+        "line": null,
+        "is_heuristic": true,
+        "source": "agent-skill-stdlib-heuristic"
+      }
+    ]
+  },
+  "findings": [
+    {
+      "file": "package-lock.json",
+      "line": 24,
+      "severity": "P0",
+      "category": "agent_plaintext_secret",
+      "description": "Agent configuration embeds plaintext secret at 'packages.node_modules/@csstools/css-tokenizer.resolved'",
+      "suggestion": "Move credentials to environment variables or a secret manager and rotate exposed values.",
+      "is_heuristic": true,
+      "source": "agent-skill-stdlib-heuristic",
+      "evidence": "packages.node_modules/@csstools/css-tokenizer.resolved=<redacted>"
+    },
+    {
+      "file": "package-lock.json",
+      "line": 25,
+      "severity": "P0",
+      "category": "agent_plaintext_secret",
+      "description": "Agent configuration embeds plaintext secret at 'packages.node_modules/@csstools/css-tokenizer.integrity'",
+      "suggestion": "Move credentials to environment variables or a secret manager and rotate exposed values.",
+      "is_heuristic": true,
+      "source": "agent-skill-stdlib-heuristic",
+      "evidence": "packages.node_modules/@csstools/css-tokenizer.integrity=<redacted>"
+    },
+    {
+      "file": "package-lock.json",
+      "line": 94,
+      "severity": "P0",
+      "category": "agent_plaintext_secret",
+      "description": "Agent configuration embeds plaintext secret at 'packages.node_modules/@csstools/css-tokenizer.funding[0].url'",
+      "suggestion": "Move credentials to environment variables or a secret manager and rotate exposed values.",
+      "is_heuristic": true,
+      "source": "agent-skill-stdlib-heuristic",
+      "evidence": "packages.node_modules/@csstools/css-tokenizer.funding[0].url=<redacted>"
+    },
+    {
+      "file": "package-lock.json",
+      "line": 93,
+      "severity": "P0",
+      "category": "agent_plaintext_secret",
+      "description": "Agent configuration embeds plaintext secret at 'packages.node_modules/@csstools/css-tokenizer.funding[1].type'",
+      "suggestion": "Move credentials to environment variables or a secret manager and rotate exposed values.",
+      "is_heuristic": true,
+      "source": "agent-skill-stdlib-heuristic",
+      "evidence": "packages.node_modules/@csstools/css-tokenizer.funding[1].type=<redacted>"
+    },
+    {
+      "file": "package-lock.json",
+      "line": 94,
+      "severity": "P0",
+      "category": "agent_plaintext_secret",
+      "description": "Agent configuration embeds plaintext secret at 'packages.node_modules/@csstools/css-tokenizer.funding[1].url'",
+      "suggestion": "Move credentials to environment variables or a secret manager and rotate exposed values.",
+      "is_heuristic": true,
+      "source": "agent-skill-stdlib-heuristic",
+      "evidence": "packages.node_modules/@csstools/css-tokenizer.funding[1].url=<redacted>"
+    },
+    {
+      "file": "package-lock.json",
+      "line": 36,
+      "severity": "P0",
+      "category": "agent_plaintext_secret",
+      "description": "Agent configuration embeds plaintext secret at 'packages.node_modules/@csstools/css-tokenizer.engines.node'",
+      "suggestion": "Move credentials to environment variables or a secret manager and rotate exposed values.",
+      "is_heuristic": true,
+      "source": "agent-skill-stdlib-heuristic",
+      "evidence": "packages.node_modules/@csstools/css-tokenizer.engines.node=<redacted>"
+    },
+    {
+      "file": ".audit-results-incremental\\secret_history_scanner_result.json",
+      "line": null,
+      "severity": "P0",
+      "category": "agent_plaintext_secret",
+      "description": "Agent configuration embeds plaintext secret at 'secret_history.tools_missing[0]'",
+      "suggestion": "Move credentials to environment variables or a secret manager and rotate exposed values.",
+      "is_heuristic": true,
+      "source": "agent-skill-stdlib-heuristic",
+      "evidence": "secret_history.tools_missing[0]=<redacted>"
+    },
+    {
+      "file": ".audit-results-incremental\\secret_history_scanner_result.json",
+      "line": null,
+      "severity": "P0",
+      "category": "agent_plaintext_secret",
+      "description": "Agent configuration embeds plaintext secret at 'secret_history.tools_missing[1]'",
+      "suggestion": "Move credentials to environment variables or a secret manager and rotate exposed values.",
+      "is_heuristic": true,
+      "source": "agent-skill-stdlib-heuristic",
+      "evidence": "secret_history.tools_missing[1]=<redacted>"
+    },
+    {
+      "file": ".audit-results-incremental\\secret_history_scanner_result.json",
+      "line": 36,
+      "severity": "P0",
+      "category": "agent_plaintext_secret",
+      "description": "Agent configuration embeds plaintext secret at 'secret_history.coverage_gaps[0].category'",
+      "suggestion": "Move credentials to environment variables or a secret manager and rotate exposed values.",
+      "is_heuristic": true,
+      "source": "agent-skill-stdlib-heuristic",
+      "evidence": "secret_history.coverage_gaps[0].category=<redacted>"
+    },
+    {
+      "file": ".audit-results-incremental\\secret_history_scanner_result.json",
+      "line": 37,
+      "severity": "P0",
+      "category": "agent_plaintext_secret",
+      "description": "Agent configuration embeds plaintext secret at 'secret_history.coverage_gaps[0].description'",
+      "suggestion": "Move credentials to environment variables or a secret manager and rotate exposed values.",
+      "is_heuristic": true,
+      "source": "agent-skill-stdlib-heuristic",
+      "evidence": "secret_history.coverage_gaps[0].description=<redacted>"
+    },
+    {
+      "file": ".audit-results-incremental\\secret_history_scanner_result.json",
+      "line": 38,
+      "severity": "P0",
+      "category": "agent_plaintext_secret",
+      "description": "Agent configuration embeds plaintext secret at 'secret_history.coverage_gaps[0].suggestion'",
+      "suggestion": "Move credentials to environment variables or a secret manager and rotate exposed values.",
+      "is_heuristic": true,
+      "source": "agent-skill-stdlib-heuristic",
+      "evidence": "secret_history.coverage_gaps[0].suggestion=<redacted>"
+    },
+    {
+      "file": ".audit-results-incremental\\secret_history_scanner_result.json",
+      "line": null,
+      "severity": "P0",
+      "category": "agent_plaintext_secret",
+      "description": "Agent configuration embeds plaintext secret at 'secret_history.coverage_gaps[0].tools_missing[0]'",
+      "suggestion": "Move credentials to environment variables or a secret manager and rotate exposed values.",
+      "is_heuristic": true,
+      "source": "agent-skill-stdlib-heuristic",
+      "evidence": "secret_history.coverage_gaps[0].tools_missing[0]=<redacted>"
+    },
+    {
+      "file": ".audit-results-incremental\\secret_history_scanner_result.json",
+      "line": null,
+      "severity": "P0",
+      "category": "agent_plaintext_secret",
+      "description": "Agent configuration embeds plaintext secret at 'secret_history.coverage_gaps[0].tools_missing[1]'",
+      "suggestion": "Move credentials to environment variables or a secret manager and rotate exposed values.",
+      "is_heuristic": true,
+      "source": "agent-skill-stdlib-heuristic",
+      "evidence": "secret_history.coverage_gaps[0].tools_missing[1]=<redacted>"
+    },
+    {
+      "file": ".audit-results-incremental\\secret_history_scanner_result.json",
+      "line": 43,
+      "severity": "P0",
+      "category": "agent_plaintext_secret",
+      "description": "Agent configuration embeds plaintext secret at 'secret_history.coverage_gaps[0].source'",
+      "suggestion": "Move credentials to environment variables or a secret manager and rotate exposed values.",
+      "is_heuristic": true,
+      "source": "agent-skill-stdlib-heuristic",
+      "evidence": "secret_history.coverage_gaps[0].source=<redacted>"
+    }
+  ]
+}

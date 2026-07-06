@@ -1,0 +1,54 @@
+{
+  "project_root": "D:\\Project\\Go_project\\sessiontalk_export",
+  "files_scanned": 23,
+  "total_findings": 3,
+  "severity_distribution": {
+    "P0": 0,
+    "P1": 0,
+    "P2": 3
+  },
+  "category_distribution": {
+    "dead_end_case": 3
+  },
+  "business_flows": {
+    "unfinished_branches": 0,
+    "dead_end_cases": 3,
+    "state_machine_gaps": 0,
+    "missing_idempotency_markers": 0
+  },
+  "findings": [
+    {
+      "file": "src\\lib\\jszip.min.js",
+      "line": 13,
+      "severity": "P2",
+      "category": "dead_end_case",
+      "description": "switch with 4 cases but no default — unhandled values fall through silently",
+      "suggestion": "Add a default case that either handles the unexpected value, logs it, or returns a clear error",
+      "is_heuristic": true,
+      "source": "stdlib-heuristic",
+      "metric": 4
+    },
+    {
+      "file": "src\\lib\\jszip.min.js",
+      "line": 13,
+      "severity": "P2",
+      "category": "dead_end_case",
+      "description": "switch with 3 cases but no default — unhandled values fall through silently",
+      "suggestion": "Add a default case that either handles the unexpected value, logs it, or returns a clear error",
+      "is_heuristic": true,
+      "source": "stdlib-heuristic",
+      "metric": 3
+    },
+    {
+      "file": "src\\lib\\jszip.min.js",
+      "line": 13,
+      "severity": "P2",
+      "category": "dead_end_case",
+      "description": "switch with 4 cases but no default — unhandled values fall through silently",
+      "suggestion": "Add a default case that either handles the unexpected value, logs it, or returns a clear error",
+      "is_heuristic": true,
+      "source": "stdlib-heuristic",
+      "metric": 4
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "project_root": "D:/Project/Go_project/sessiontalk_export",
+  "files_scanned": 28,
+  "total_vulnerabilities": 1,
+  "severity_distribution": {
+    "P0": 1
+  },
+  "category_distribution": {
+    "code_execution": 1
+  },
+  "vulnerabilities": [
+    {
+      "file": "src\\lib\\jszip.min.js",
+      "line": 13,
+      "severity": "P0",
+      "category": "code_execution",
+      "description": "new Function() - dynamic code execution risk",
+      "suggestion": "Refactor to avoid dynamic code generation",
+      "code_snippet": "!function(e){if(\"object\"==typeof exports&&\"undefined\"!=typeof module)module.exports=e();else if(\"function\"==typeof define&&define.amd)define([],e);else{(\"undefined\"!=typeof window?window:\"undefined\"!="
+    }
+  ]
+}

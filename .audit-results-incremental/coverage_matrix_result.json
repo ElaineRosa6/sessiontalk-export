@@ -1,0 +1,179 @@
+{
+  "project_root": "D:\\Project\\Go_project\\sessiontalk_export",
+  "matrix_version": "1.11.0",
+  "detected_languages": [
+    "config",
+    "javascript"
+  ],
+  "files_by_language": {
+    "javascript": 23,
+    "config": 5
+  },
+  "scanner_coverage": {
+    "coverage_rows": [
+      {
+        "vulnerability_class": "sql_injection",
+        "title": "SQL Injection",
+        "language": "javascript",
+        "status": "automated",
+        "scanners": [
+          "security_scanner",
+          "manual_review_planner"
+        ],
+        "fixture": "js_direct_sqli"
+      },
+      {
+        "vulnerability_class": "command_injection",
+        "title": "Command Injection",
+        "language": "javascript",
+        "status": "automated",
+        "scanners": [
+          "security_scanner",
+          "manual_review_planner"
+        ],
+        "fixture": "js_child_process_concat"
+      },
+      {
+        "vulnerability_class": "xss",
+        "title": "Cross-Site Scripting",
+        "language": "javascript",
+        "status": "automated",
+        "scanners": [
+          "security_scanner",
+          "manual_review_planner"
+        ],
+        "fixture": "js_inner_html"
+      },
+      {
+        "vulnerability_class": "ssrf",
+        "title": "Server-Side Request Forgery",
+        "language": "javascript",
+        "status": "automated",
+        "scanners": [
+          "security_scanner",
+          "manual_review_planner"
+        ],
+        "fixture": "js_fetch_user_url"
+      },
+      {
+        "vulnerability_class": "path_traversal",
+        "title": "Path Traversal",
+        "language": "javascript",
+        "status": "automated",
+        "scanners": [
+          "security_scanner",
+          "manual_review_planner"
+        ],
+        "fixture": "js_read_file_request_path"
+      },
+      {
+        "vulnerability_class": "code_execution_deserialization",
+        "title": "Code Execution and Unsafe Deserialization",
+        "language": "javascript",
+        "status": "automated",
+        "scanners": [
+          "security_scanner"
+        ],
+        "fixture": "js_eval"
+      },
+      {
+        "vulnerability_class": "authz_privilege_escalation",
+        "title": "Authorization Scope and Privilege Escalation",
+        "language": "javascript",
+        "status": "ai-first",
+        "scanners": [
+          "manual_review_planner"
+        ],
+        "fixture": "js_id_route_authz_target"
+      },
+      {
+        "vulnerability_class": "race_condition_toctou",
+        "title": "Race Condition and TOCTOU",
+        "language": "javascript",
+        "status": "ai-first",
+        "scanners": [
+          "manual_review_planner"
+        ],
+        "fixture": null
+      },
+      {
+        "vulnerability_class": "dependency_cve",
+        "title": "Dependency CVEs",
+        "language": "javascript",
+        "status": "external-tool",
+        "scanners": [
+          "dep_scanner",
+          "npm audit"
+        ],
+        "fixture": null
+      },
+      {
+        "vulnerability_class": "configuration_secrets",
+        "title": "Configuration and Secret Leakage",
+        "language": "config",
+        "status": "automated",
+        "scanners": [
+          "security_scanner",
+          "secret_history_scanner"
+        ],
+        "fixture": "env_api_key"
+      },
+      {
+        "vulnerability_class": "configuration_secrets",
+        "title": "Configuration and Secret Leakage",
+        "language": "javascript",
+        "status": "automated",
+        "scanners": [
+          "security_scanner",
+          "secret_history_scanner"
+        ],
+        "fixture": "js_hardcoded_secret"
+      },
+      {
+        "vulnerability_class": "git_history_secrets",
+        "title": "Git History Secret Leakage",
+        "language": "config",
+        "status": "external-tool",
+        "scanners": [
+          "secret_history_scanner",
+          "gitleaks",
+          "trufflehog"
+        ],
+        "fixture": null
+      },
+      {
+        "vulnerability_class": "git_history_secrets",
+        "title": "Git History Secret Leakage",
+        "language": "javascript",
+        "status": "external-tool",
+        "scanners": [
+          "secret_history_scanner",
+          "gitleaks",
+          "trufflehog"
+        ],
+        "fixture": null
+      }
+    ],
+    "status_counts": {
+      "automated": 8,
+      "ai-first": 2,
+      "external-tool": 3
+    },
+    "coverage_gaps": [],
+    "status_definitions": {
+      "automated": "Scanner has direct pattern coverage for simple/same-line forms.",
+      "partial": "Scanner has heuristic coverage but important variants require AI review.",
+      "ai-first": "Automated script creates review targets; AI agent must verify before human escalation.",
+      "external-tool": "Coverage depends on optional external tools such as semgrep, bandit, gosec, or native dependency auditors.",
+      "not-applicable": "The vulnerability class is not normally applicable to this language or file type.",
+      "unsupported": "No meaningful automated, external, or AI-target coverage is currently declared."
+    }
+  },
+  "findings": [],
+  "total_findings": 0,
+  "severity_distribution": {
+    "P0": 0,
+    "P1": 0,
+    "P2": 0
+  }
+}
