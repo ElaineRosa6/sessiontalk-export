@@ -13,3 +13,4 @@
 - [HTML 转 Markdown 经验](html_to_md_conversion.md) — 代码块语言提取、标签清理、列表转换陷阱
 - [SessionTalk 项目总结](project_summary.md) — Chrome 扩展项目，从智谱清言导出对话为 Markdown/HTML
 - [扩展测试反馈](feedback_testing.md) — CSS hidden 覆盖、Vue scoped CSS、文件命名、自动同步
+- [Audit Closure 2026-07-23](audit_closure_20260723.md) — 全量复核：生产构建通过，JSZip 动态代码命中为 vendored 包误报

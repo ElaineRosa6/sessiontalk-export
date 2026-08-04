@@ -1,5 +1,7 @@
 # 代码审计报告
 
+> 2026-07-22 复核说明：本报告是 2026-05-11 历史审计快照。当前代码已修复本报告列出的主要高优先级项：HTML 导出使用 `sanitizeHtml()`，Blob URL 延迟 `revokeObjectURL()`，对话 ID 使用 `crypto.randomUUID()`，HTML 文本字段集中走 `escapeHtml()` / `sanitizeHtml()`。当前状态以 `docs/AUDIT_REMEDIATION_GUIDE.md` 的 2026-07-22 说明为准。
+
 **日期**: 2026-05-11
 **项目**: 智谱清言对话导出 Chrome 扩展 (sessiontalk_export)
 **文件数**: 12 个源文件（约 850 行核心代码）
