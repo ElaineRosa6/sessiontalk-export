@@ -74,6 +74,14 @@ class PopupState {
 
 // ========== Popup 控制器 ==========
 const MESSAGE_TIMEOUT = 15000;
+const EXPORT_TIMEOUT_PER_ITEM_MS = 60000;
+const EXPORT_TIMEOUT_MIN_MS = 120000;
+const EXPORT_TIMEOUT_MAX_MS = 30 * 60 * 1000;
+
+function exportTimeoutMs(itemCount) {
+  const n = Math.max(1, itemCount || 1);
+  return Math.min(EXPORT_TIMEOUT_MAX_MS, Math.max(EXPORT_TIMEOUT_MIN_MS, n * EXPORT_TIMEOUT_PER_ITEM_MS));
+}
 
 class PopupController {
   constructor() {
@@ -92,23 +100,44 @@ class PopupController {
     this.render();
   }
 
-  sendMessageWithTimeout(tabId, message, timeoutMs = MESSAGE_TIMEOUT) {
+  sendMessageWithTimeout(tabId, message, timeoutMs = MESSAGE_TIMEOUT, { resetOnProgress = false } = {}) {
     return new Promise((resolve, reject) => {
       let settled = false;
-      chrome.tabs.sendMessage(tabId, message, (response) => {
+      let timer = null;
+
+      const settle = (handler) => (value) => {
         if (settled) return;
         settled = true;
+        if (timer) clearTimeout(timer);
+        if (resetOnProgress) {
+          chrome.runtime.onMessage.removeListener(onProgress);
+        }
+        handler(value);
+      };
+
+      const armTimer = () => {
+        if (timer) clearTimeout(timer);
+        timer = setTimeout(() => {
+          settle(reject)(new Error('请求超时，请刷新页面后重试'));
+        }, timeoutMs);
+      };
+
+      const onProgress = (msg) => {
+        if (msg?.type === 'EXPORT_PROGRESS') armTimer();
+      };
+
+      if (resetOnProgress) {
+        chrome.runtime.onMessage.addListener(onProgress);
+      }
+
+      chrome.tabs.sendMessage(tabId, message, (response) => {
         if (chrome.runtime.lastError) {
-          reject(new Error(chrome.runtime.lastError.message));
+          settle(reject)(new Error(chrome.runtime.lastError.message));
         } else {
-          resolve(response);
+          settle(resolve)(response);
         }
       });
-      setTimeout(() => {
-        if (settled) return;
-        settled = true;
-        reject(new Error('请求超时，请刷新页面后重试'));
-      }, timeoutMs);
+      armTimer();
     });
   }
 
@@ -311,13 +340,15 @@ class PopupController {
   }
 
   invertSelect() {
-    const ids = new Set(this.state.getFilteredConversations().map(c => c.id));
-    this.state.selectedIds.forEach(id => {
-      if (ids.has(id)) this.state.selectedIds.delete(id);
-    });
-    ids.forEach(id => {
-      if (!this.state.selectedIds.has(id)) this.state.selectedIds.add(id);
-    });
+    // Invert currently visible rows only; do not collapse into select-all.
+    const filtered = this.state.getFilteredConversations();
+    for (const conv of filtered) {
+      if (this.state.selectedIds.has(conv.id)) {
+        this.state.selectedIds.delete(conv.id);
+      } else {
+        this.state.selectedIds.add(conv.id);
+      }
+    }
     this.renderConversationList();
     this.state.updateSelectedCount();
   }
@@ -376,7 +407,7 @@ class PopupController {
       const response = await this.sendMessageWithTimeout(tab.id, {
         type: 'EXPORT_CONVERSATIONS',
         data: { conversations: selectedConversations, format, merge }
-      });
+      }, exportTimeoutMs(selectedConversations.length), { resetOnProgress: true });
 
       if (this.state.exportCancelled) {
         this.hideProgressModal();
