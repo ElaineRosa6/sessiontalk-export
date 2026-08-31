@@ -14,3 +14,4 @@
 - [SessionTalk 项目总结](project_summary.md) — Chrome 扩展项目，从智谱清言导出对话为 Markdown/HTML
 - [扩展测试反馈](feedback_testing.md) — CSS hidden 覆盖、Vue scoped CSS、文件命名、自动同步
 - [Audit Closure 2026-07-23](audit_closure_20260723.md) — 全量复核：生产构建通过，JSZip 动态代码命中为 vendored 包误报
+- [Audit Cleanup 2026-08-05](audit_cleanup_20260805.md) — .audit-results-incremental 索引移除（7512f83）+ master 推送

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "智谱清言对话导出 Chrome 插件",
   "scripts": {
+    "test": "node test/test_code_block_patterns.js && node test/test_full_pipeline.js && node test/test_thinking_code_extraction.js && node test/test_widget_scenario.js",
     "build": "webpack --mode production",
     "dev": "webpack --mode development --watch",
     "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\""
